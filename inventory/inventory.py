@@ -4,8 +4,7 @@
         skucode
         quantity
 '''
-
-
+import requests
 from flask import Blueprint,Flask,jsonify,request
 #!pipenv install flask_restful
 from flask_restful import Resource,Api
@@ -112,5 +111,22 @@ with app.app_context():
     db.create_all()
 
 if __name__ == "__main__":
-    app.run(debug=True,port=8000)
+    port = 8001
+    discovery_server_url = "http://localhost:5005/register"
+    service_name = "inventory-service"
+    service_address = f"http://localhost:{port}"
+
+    registration_data = {
+        "name": service_name,
+        "address": service_address
+    }
+
+    try:
+        response = requests.post(discovery_server_url, json=registration_data)
+        response.raise_for_status()
+        print(f"Service {service_name} registered successfully.")
+    except requests.exceptions.RequestException as e:
+        print(f"Failed to register service {service_name}: {e}")
+
+    app.run(debug=True, port=port)
 

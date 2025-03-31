@@ -6,7 +6,7 @@
         price
 
 '''
-
+import requests
 from flask import Blueprint,Flask,jsonify,request
 #!pipenv install flask_restful
 from flask_restful import Resource,Api
@@ -58,8 +58,6 @@ class ProductResource(Resource):
                 return jsonify(product.to_dict())
             except:
                 return {"status": "Failed"}
-
-        return {"Method" : "GET"}
 
     def post(self):
         try:
@@ -119,6 +117,23 @@ api.add_resource(ProductResource,'/products','/products/<int:id>')
 with app.app_context():
     db.create_all()
 
-if __name__ == "__main__":
-    app.run(debug=True,port=8000)
 
+if __name__ == "__main__":
+    port = 8003
+    discovery_server_url = "http://localhost:5005/register"
+    service_name = "product-service"
+    service_address = f"http://localhost:{port}"
+
+    registration_data = {
+        "name": service_name,
+        "address": service_address
+    }
+
+    try:
+        response = requests.post(discovery_server_url, json=registration_data)
+        response.raise_for_status()
+        print(f"Service {service_name} registered successfully.")
+    except requests.exceptions.RequestException as e:
+        print(f"Failed to register service {service_name}: {e}")
+
+    app.run(debug=True, port=port)

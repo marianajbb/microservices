@@ -1,0 +1,25 @@
+2025/03/27 13:15:37 [emerg] 26048#2768: location "/inventory" is outside location "/orders" in C:\Users\admco\Downloads\demo\MICROSERVICES\APIGateway-Nginx\nginx-1.26.3/conf/nginx.conf:59
+2025/03/27 13:15:45 [emerg] 15124#26336: location "/inventory" is outside location "/orders" in C:\Users\admco\Downloads\demo\MICROSERVICES\APIGateway-Nginx\nginx-1.26.3/conf/nginx.conf:59
+2025/03/27 13:18:29 [emerg] 24012#25372: unexpected "}" in C:\Users\admco\Downloads\demo\MICROSERVICES\APIGateway-Nginx\nginx-1.26.3/conf/nginx.conf:63
+2025/03/27 13:18:52 [notice] 21284#23504: signal process started
+2025/03/27 13:19:14 [notice] 23392#25748: signal process started
+2025/03/27 13:19:52 [error] 3856#21568: *1 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 127.0.0.1, server: localhost, request: "GET /orders HTTP/1.1", upstream: "http://[::1]:8001/inventory", host: "127.0.0.1:8004"
+2025/03/27 13:20:03 [error] 3856#21568: *1 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 127.0.0.1, server: localhost, request: "GET /inventory HTTP/1.1", upstream: "http://[::1]:8002/orders", host: "127.0.0.1:8004"
+2025/03/27 13:20:14 [error] 3856#21568: *1 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 127.0.0.1, server: localhost, request: "GET /products HTTP/1.1", upstream: "http://[::1]:8003/products", host: "127.0.0.1:8004"
+2025/03/27 13:20:30 [error] 3856#21568: *8 CreateFile() "C:\Users\admco\Downloads\demo\MICROSERVICES\APIGateway-Nginx\nginx-1.26.3/html/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8004", referrer: "http://localhost:8004/"
+2025/03/27 13:39:46 [emerg] 4388#20172: directive "include" is not terminated by ";" in C:\Users\admco\Downloads\demo\MICROSERVICES\APIGateway-Nginx\nginx-1.26.3/conf/nginx.conf:47
+2025/03/27 13:41:20 [emerg] 11136#11864: invalid number of the map parameters in C:\Users\admco\Downloads\demo\MICROSERVICES\APIGateway-Nginx\nginx-1.26.3/conf/api_keys.conf:3
+2025/03/27 13:42:56 [emerg] 17440#3244: invalid number of arguments in "auth_request" directive in C:\Users\admco\Downloads\demo\MICROSERVICES\APIGateway-Nginx\nginx-1.26.3/conf/nginx.conf:67
+2025/03/27 13:43:40 [emerg] 20196#16144: unknown directive "if($http_authorization" in C:\Users\admco\Downloads\demo\MICROSERVICES\APIGateway-Nginx\nginx-1.26.3/conf/nginx.conf:71
+2025/03/27 13:44:48 [emerg] 24388#18048: unknown directive "if($http_authorization" in C:\Users\admco\Downloads\demo\MICROSERVICES\APIGateway-Nginx\nginx-1.26.3/conf/nginx.conf:71
+2025/03/27 13:45:44 [notice] 3428#16100: signal process started
+2025/03/27 13:48:17 [error] 6696#13532: *14 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 127.0.0.1, server: localhost, request: "GET /orders HTTP/1.1", upstream: "http://[::1]:8001/inventory", host: "127.0.0.1:8004"
+2025/03/28 13:01:56 [error] 6696#13532: *20 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 127.0.0.1, server: localhost, request: "GET /inventory HTTP/1.1", upstream: "http://[::1]:8002/orders", host: "127.0.0.1:8004"
+2025/03/28 13:02:14 [error] 6696#13532: *20 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 127.0.0.1, server: localhost, request: "GET /orders HTTP/1.1", upstream: "http://[::1]:8001/inventory", host: "127.0.0.1:8004"
+2025/03/30 22:18:27 [emerg] 1812#24440: LoadLibrary() "C:\Users\admco\Downloads\demo\MICROSERVICES\APIGateway-Nginx\nginx-1.26.3/modules/ngx_http_js_module.so" failed (The specified module could not be found) in C:\Users\admco\Downloads\demo\MICROSERVICES\APIGateway-Nginx\nginx-1.26.3/conf/nginx.conf:1
+2025/03/30 22:31:06 [emerg] 30156#19064: unexpected ";" in C:\Users\admco\Downloads\demo\MICROSERVICES\APIGateway-Nginx\nginx-1.26.3/conf/nginx.conf:1
+2025/03/30 22:31:52 [warn] 11544#28916: "user" is not supported, ignored in C:\Users\admco\Downloads\demo\MICROSERVICES\APIGateway-Nginx\nginx-1.26.3/conf/nginx.conf:4
+2025/03/30 22:31:52 [notice] 11544#28916: signal process started
+2025/03/30 22:31:53 [warn] 29656#23764: "user" is not supported, ignored in C:\Users\admco\Downloads\demo\MICROSERVICES\APIGateway-Nginx\nginx-1.26.3/conf/nginx.conf:4
+2025/03/30 22:32:41 [notice] 14836#29756: signal process started
+2025/03/30 22:41:11 [notice] 6644#28464: signal process started
